@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnomante</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script/script.js" defer></script>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png"
+      href="imagens/Tecnomago%20encapuzado%20nas%20ruínas%20místicas.png">
+</head>
+
+<body>
+
+<main class="menu">
+
+    <header>
+        <h1 class="h1">
+            <div class="bloco"><strong>O tecnomante</strong></div>
+        </h1>
+        <hr>
+    </header>
+
+    <section>
+        <div class="descricao">Descrição</div>
+
+        <div class="tecno">
+            <img src="imagens/Tecnomago encapuzado nas ruínas místicas.png"
+                 alt="Tecnomante encapuzado nas ruínas místicas">
+        </div>
+
+        <hr>
+
+        <p class="caracteristicas">Características físicas:</p>
+    </section>
+
+    <hr>
+
+    <section>
+        <div class="container">
+            <div class="containera">Altura: 175cm</div>
+            <div class="containera">Peso: 110kg</div>
+            <div class="containera">Físico: Robusto</div>
+            <div class="containera">Entonação: Branco</div>
+            <div class="containera">Cabelo: Marrom</div>
+            <div class="containera">Olhos: Marrons</div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <p class="caracteristicas">Background:</p>
+
+        <div class="stats">
+            <div class="statsa">Nome: Gandalf</div>
+            <div class="statsa">Apelido: Gandy</div>
+            <div class="statsa">Idade: 30</div>
+            <div class="statsa">Gênero: Homem</div>
+            <div class="statsa">Classe: Tecnomante</div>
+            <div class="statsa">Guilda: Umbrella</div>
+
+            <div class="statsa">
+                Descrição: Sábio e discreto, sob sua aparência comum
+                esconde um corpo completamente modificado
+                ciberneticamente, capaz de conjurar magias e de
+                manipular tecnologia em união, mas ainda assim
+                mantém seu lado humano intacto.
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="sistema-nivel">
+
+        <h2 class="caracteristicas">Nível do personagem</h2>
+
+        <div class="nivel-info">
+            <h3>Nível: <output id="nivel-personagem">1</output></h3>
+
+            <p>
+                XP:
+                <output id="xp-atual">0</output> /
+                <output id="xp-maximo">100</output>
+            </p>
+
+            <progress id="barra-xp" max="100" value="0"></progress>
+
+            <button type="button" id="botao-xp">
+                Ganhar XP
+            </button>
+        </div>
+
+    </section>
+
+    <div class="controle-secoes">
+        <button type="button" id="botao-ver-mais">
+            Ver mais <i class="fa-solid fa-chevron-down"></i>
+        </button>
+    </div>
+
+    <hr>
+
+    <section class="secao-oculta">
+        <h2 class="caracteristicas">Atributos</h2>
+
+        <div class="avatar">
+
+            <div class="atributos">
+                <label for="forca">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <em>Força</em>
+                </label>
+
+                <output id="valor-forca" for="forca">4</output>
+
+                <input type="range" id="forca" class="controle"
+                       min="0" max="10" step="1" value="4">
+
+                <progress class="barra-progresso" max="10" value="4"></progress>
+            </div>
+
+            <div class="atributos">
+                <label for="destreza">
+                    <i class="fa-solid fa-person-running"></i>
+                    <em>Destreza</em>
+                </label>
+
+                <output id="valor-destreza" for="destreza">3</output>
+
+                <input type="range" id="destreza" class="controle"
+                       min="0" max="10" step="1" value="3">
+
+                <progress class="barra-progresso" max="10" value="3"></progress>
+            </div>
+
+            <div class="atributos">
+                <label for="constituicao">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    <em>Constituição</em>
+                </label>
+
+                <output id="valor-constituicao" for="constituicao">6</output>
+
+                <input type="range" id="constituicao" class="controle"
+                       min="0" max="10" step="1" value="6">
+
+                <progress class="barra-progresso" max="10" value="6"></progress>
+            </div>
+
+            <div class="atributos">
+                <label for="inteligencia">
+                    <i class="fa-solid fa-brain"></i>
+                    <em>Inteligência</em>
+                </label>
+
+                <output id="valor-inteligencia" for="inteligencia">8</output>
+
+                <input type="range" id="inteligencia" class="controle"
+                       min="0" max="10" step="1" value="8">
+
+                <progress class="barra-progresso" max="10" value="8"></progress>
+            </div>
+
+            <div class="atributos">
+                <label for="carisma">
+                    <i class="fa-solid fa-comments"></i>
+                    <em>Carisma</em>
+                </label>
+
+                <output id="valor-carisma" for="carisma">1</output>
+
+                <input type="range" id="carisma" class="controle"
+                       min="0" max="10" step="1" value="1">
+
+                <progress class="barra-progresso" max="10" value="1"></progress>
+            </div>
+
+            <div class="atributos">
+                <label for="sabedoria">
+                    <i class="fa-solid fa-book-open"></i>
+                    <em>Sabedoria</em>
+                </label>
+
+                <output id="valor-sabedoria" for="sabedoria">10</output>
+
+                <input type="range" id="sabedoria" class="controle"
+                       min="0" max="10" step="1" value="10">
+
+                <progress class="barra-progresso" max="10" value="10"></progress>
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="secao-oculta">
+        <h2 class="caracteristicas">Habilidades</h2>
+
+        <div class="habil">
+
+            <div class="texto">
+                <h4>CONTROLE DE ELETRICIDADE: SOLTA ARCOS ELÉTRICOS E INVOCA RAIOS:</h4>
+
+                <div class="nivel-habilidade">
+                    <label for="eletricidade">Nível da habilidade:</label>
+                    <span><output id="valor-eletricidade" for="eletricidade">0</output>/10</span>
+
+                    <input type="range" id="eletricidade"
+                           class="controle"
+                           min="0" max="10" step="1" value="0">
+
+                    <progress class="barra-progresso" max="10" value="0"></progress>
+                </div>
+            </div>
+
+            <div class="imagem">
+                <img src="imagens/pexels-emre-varisli-506660537-17817244.jpg"
+                     alt="Raios em um fundo preto">
+            </div>
+
+            <div class="texto">
+                <h4>INVOCA SERVOS MECÂNICOS E AGENTES IA AUTÔNOMOS PARA DIVIDIR TAREFAS MENTAIS:</h4>
+
+                <div class="nivel-habilidade">
+                    <label for="servos">Nível da habilidade:</label>
+                    <span><output id="valor-servos" for="servos">0</output>/10</span>
+
+                    <input type="range" id="servos"
+                           class="controle"
+                           min="0" max="10" step="1" value="0">
+
+                    <progress class="barra-progresso" max="10" value="0"></progress>
+                </div>
+            </div>
+
+            <div class="imagem">
+                <img src="imagens/pexels-kindelmedia-8566636.jpg"
+                     alt="Carrinhos robôs em fila">
+            </div>
+
+            <div class="texto">
+                <h4>CONSEGUE USAR A MENTE PARA PULAR EM SERVIDORES E CONTROLAR DISPOSITIVOS REMOTAMENTE:</h4>
+
+                <div class="nivel-habilidade">
+                    <label for="controle-remoto">Nível da habilidade:</label>
+                    <span><output id="valor-controle-remoto" for="controle-remoto">0</output>/10</span>
+
+                    <input type="range" id="controle-remoto"
+                           class="controle"
+                           min="0" max="10" step="1" value="0">
+
+                    <progress class="barra-progresso" max="10" value="0"></progress>
+                </div>
+            </div>
+
+            <div class="imagem">
+                <img src="imagens/pexels-sejio402-6477201.jpg"
+                     alt="Circuito de computador">
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="secao-oculta">
+        <h2 class="caracteristicas">Fraquezas</h2>
+
+        <div class="habil2">
+
+            <div class="texto2">
+                <h4>POR TER GRANDE PARTE DO CORPO CIBERNÉTICO, TEM QUE LUTAR PARA SE MANTER HUMANO</h4>
+            </div>
+
+            <div class="imagem2">
+                <img src="imagens/pexels-cottonbro-6153343.jpg"
+                     alt="Mão humana tocando uma mão robótica">
+            </div>
+
+            <div class="texto2">
+                <h4>TEM UMA BATERIA INTERNA QUE PRECISA SER CARREGADA, QUANDO ZERADA FICA VULNERÁVEL</h4>
+            </div>
+
+            <div class="imagem2">
+                <img src="imagens/pexels-castorlystock-3639037.jpg"
+                     alt="Baterias empilhadas">
+            </div>
+
+            <div class="texto2">
+                <h4>FRACO À ÁGUA E NÃO CONSEGUE NADAR</h4>
+            </div>
+
+            <div class="imagem2">
+                <img src="imagens/pexels-senanurceylan-7736144.jpg"
+                     alt="Uma mão acima da água">
+            </div>
+
+        </div>
+    </section>
+
+    <hr>
+
+    <section class="secao-oculta">
+        <section>
+            <h2 class="caracteristicas">Inventário</h2>
+
+            <div class="habil3">
+
+                <div class="texto3">
+                    <h4>- VARINHA MÁGICA | Raridade: Rara</h4>
+                </div>
+
+                <div class="imagem3">
+                    <img src="imagens/vara.jpg"
+                         alt="Uma varinha mágica acima de uma mesa">
+                </div>
+
+                <div class="texto3">
+                    <h4>- LIVRO DE C++ | Raridade: Lendária</h4>
+                </div>
+
+                <div class="imagem3">
+                    <img src="imagens/C++_ Do Zero ao Avançado.png"
+                         alt="Livro azul escrito C++">
+                </div>
+
+                <div class="texto3">
+                    <h4>- MANTO MÁGICO | Raridade: Incomum</h4>
+                </div>
+
+                <div class="imagem3">
+                    <img src="imagens/manto.jpg"
+                         alt="Um manto azul flutuando ao vento">
+                </div>
+
+            </div>
+        </section>
+    </section>
+
+    <hr>
+
+</main>
+
+<footer>
+    <nav>
+        <a href="https://github.com/tusaudat">Guilda</a>
+    </nav>
+</footer>
+
+</body>
+</html>
